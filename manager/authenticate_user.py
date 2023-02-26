@@ -4,15 +4,13 @@ def authenticate_user(credentials):
         username = input('Please enter your username: ')
         password = input('Please enter your password: ')
         if not credentials.get(username) or password != credentials[username]:
-             print('Your username or password is incorrect. Please try again \n')
+             print('Your username or password is incorrect. \n')
+             attempts_left -= 1
              continue
-
-    
-
-        # while not credentials.get(username) or password != credentials[username]:
-        #         print("Your username or password is incorrect. Please try again \n")
-        #         username = input("Please enter your username: ")
-        #         password = input("Please enter your password: ")
+        if credentials.get(username) and password == credentials[username]:
+            return True
+    print('You have made 3 incorrect attempts. Please try again later.')
+    return False
 
 
 
