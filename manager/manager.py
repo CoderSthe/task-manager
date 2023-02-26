@@ -4,6 +4,7 @@ from datetime import date, timedelta
 from add_task import add_task
 from authenticate_user import authenticate_user, valid_credentials
 from view_tasks import view_all, view_mine
+from gen_reports import generate_reports
 
 app = typer.Typer()
 
@@ -52,7 +53,7 @@ def reports():
     '''
     :   generate reports
     '''
-    pass
+    generate_reports()
 
 
 @app.command()
