@@ -10,7 +10,7 @@ def generate_reports():
         to = open('task_overview.txt', 'w')
         uo = open('user_overview.txt', 'w')
         f1 = open('tasks.txt', 'r')
-        f2 = open('user.txt', 'r')
+        f2 = open('manager/user.txt', 'r')
 
         task_count = 0
         user_count = 0

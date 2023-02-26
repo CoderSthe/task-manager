@@ -6,7 +6,7 @@ def display_stats():
         print("You have selected an invalid option. Please try again\n")
         sys.exit()
     else:
-        f = open('user.txt', 'r')
+        f = open('manager/user.txt', 'r')
         g = open('tasks.txt', 'r')
 
         num_users = 0

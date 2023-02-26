@@ -7,8 +7,8 @@ def add_task():
     task_assigned = date.today()
     task_due = task_assigned + timedelta(days=2)
 
-    new_task = (f"{task_user}, {task_title}, {task_descrip}, {str(task_assigned)}, {str(task_due)}, {task_complete}\n")
+    new_task = (f"{task_user}, {task_title}, {task_descrip}, {str(task_assigned)}, {str(task_due)}, {task_complete}")
 
     with open('tasks.txt', 'a') as g:
-        g.write(new_task)
+        g.write(f"{new_task}\n")
     print("\nNew task successfully added!\n")
