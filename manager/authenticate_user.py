@@ -8,6 +8,8 @@ def authenticate_user(credentials):
              attempts_left -= 1
              continue
         if credentials.get(username) and password == credentials[username]:
+            with open('current_cred.txt', 'w') as f:
+                f.write(username)
             return True
     print('You have made 3 incorrect attempts. Please try again later.')
     return False
