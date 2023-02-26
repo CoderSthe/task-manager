@@ -19,7 +19,7 @@ def authenticate_user(credentials):
 def valid_credentials():
     lst_username = []
     lst_password = []
-    with open('manager/user.txt', 'r+') as f:
+    with open('main/user.txt', 'r+') as f:
         for line in f:
             valid_username, valid_password = line.split(', ')
             valid_password = valid_password.strip()
