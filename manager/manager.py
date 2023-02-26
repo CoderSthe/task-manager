@@ -5,6 +5,7 @@ from add_task import add_task
 from authenticate_user import authenticate_user, valid_credentials
 from view_tasks import view_all, view_mine
 from gen_reports import generate_reports
+from disp_stats import display_stats
 
 app = typer.Typer()
 
@@ -37,14 +38,14 @@ def add():
     '''
     add_task()
 
-
+@app.command()
 def view(choice: ViewChoice):
     '''
     :   view assigned tasks
     '''
-    if view.value == 'all':
+    if choice.value == 'all':
         view_all()
-    elif view.value == 'mine':
+    elif choice.value == 'mine':
         view_mine()
 
 
@@ -61,7 +62,7 @@ def stats():
     '''
     :   display task statistics
     '''
-    pass
+    display_stats()
 
 if __name__ == '__main__':
     app()
