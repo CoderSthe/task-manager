@@ -1,8 +1,10 @@
 import hashlib
+import getpass
 
 def login_user():
     email = input("Enter email: ")
-    password = input("Enter password: ")
+    password = getpass.getpass("Enter password: ")
+    # password = input("Enter password: ")
 
     auth = password.encode()
     auth_hash = hashlib.sha256(auth).hexdigest()

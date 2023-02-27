@@ -1,8 +1,12 @@
 import hashlib
+import getpass
+
 def register_user():
     email = input("Enter email address: ")
-    password = input("Enter password: ")
-    confirmation = input("Confirm password: ")
+    password = getpass.getpass("Enter password: ")
+    confirmation = getpass.getpass("Confirm password: ")
+    # password = input("Enter password: ")
+    # confirmation = input("Confirm password: ")
 
     if confirmation == password:
         enc = confirmation.encode()
