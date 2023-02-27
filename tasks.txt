@@ -2,3 +2,4 @@ admin, Get Groceries, Buy missing items, 2023-02-26, 2023-02-28, No
 admin, Watch You, Watch You with the girlfriend, 2023-02-26, 2023-02-28, No
 sithembiso, Test 1, Testing, 2023-02-26, 2023-02-28, No
 sithembiso, Test 2, testing, 2023-02-26, 2023-02-28, No
+sithembiso@company.co.za, Study Java On Sololearn, practise some java lessons on sololearn, 2023-02-27, 2023-03-01, No
