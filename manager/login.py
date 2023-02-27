@@ -7,7 +7,8 @@ def login_user():
     auth = password.encode()
     auth_hash = hashlib.sha256(auth).hexdigest()
     with open("credentials.txt", "r") as f:
-        stored_email, stored_password = f.read().split("\n")
+        stored_email, stored_password = f.read().split(", ")
+        stored_password = stored_password.strip()
     
     if email == stored_email and auth_hash == stored_password:
         print("Logged in successfully!")
