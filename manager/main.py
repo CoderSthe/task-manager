@@ -21,8 +21,6 @@ def login():
     :   authenticate user
     '''
     login_user()
-    # creds = valid_credentials()
-    # return authenticate_user(creds)
 
 
 @app.command()
