@@ -6,6 +6,7 @@ from authenticate_user import authenticate_user, valid_credentials
 from view_tasks import view_all, view_mine
 from gen_reports import generate_reports
 from disp_stats import display_stats
+from registration import register_user
 
 app = typer.Typer()
 
@@ -23,12 +24,12 @@ def login():
     return authenticate_user(creds)
 
 
-# @app.command()
-# def register():
-#     '''
-#     :   register a new user
-#     '''
-#     pass
+@app.command()
+def register():
+    '''
+    :   register a new user
+    '''
+    register_user()
 
 
 @app.command()
