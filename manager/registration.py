@@ -6,11 +6,11 @@ def register_user():
 
     if confirmation == password:
         enc = confirmation.encode()
-        hash1 = hashlib.md5(enc).hexdigest()
+        hash1 = hashlib.sha256(enc).hexdigest()
 
-        with open("credentials.txt", "w") as f:
+        with open("credentials.txt", "a") as f:
             f.write(f"{email}\n")
-            f.write(hash1)
+            f.write(f"{hash1}\n")
         print("You have successfully been registered!")
     else:
         print("Password and password confirmation do not match.\n")
