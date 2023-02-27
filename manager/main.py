@@ -7,6 +7,7 @@ from gen_reports import generate_reports
 from disp_stats import display_stats
 from registration import register_user
 from login import login_user
+from exit_program import logout_session
 
 app = typer.Typer()
 
@@ -63,6 +64,14 @@ def stats():
     :   display task statistics
     '''
     display_stats()
+
+
+@app.command()
+def logout():
+    '''
+    :   log out of current session
+    '''
+    logout_session()
 
 if __name__ == '__main__':
     app()
