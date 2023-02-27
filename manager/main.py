@@ -29,6 +29,7 @@ def register():
     '''
     :   register a new user
     '''
+    typer.echo('registering new user...')
     register_user()
 
 
@@ -37,6 +38,7 @@ def add():
     '''
     :   add a new task
     '''
+    typer.echo('adding new task...')
     add_task()
 
 @app.command()
@@ -45,8 +47,10 @@ def view(choice: ViewChoice):
     :   view assigned tasks
     '''
     if choice.value == 'all':
+        typer.echo('viewing all tasks...')
         view_all()
     elif choice.value == 'mine':
+        typer.echo('viewing tasks assigned to you...')
         view_mine()
 
 
@@ -55,6 +59,7 @@ def reports():
     '''
     :   generate reports
     '''
+    typer.echo('generating reports...')
     generate_reports()
 
 
@@ -63,6 +68,7 @@ def stats():
     '''
     :   display task statistics
     '''
+    typer.echo('displaying stats...')
     display_stats()
 
 
