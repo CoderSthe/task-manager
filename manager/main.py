@@ -7,6 +7,7 @@ from view_tasks import view_all, view_mine
 from gen_reports import generate_reports
 from disp_stats import display_stats
 from registration import register_user
+from login import login_user
 
 app = typer.Typer()
 
@@ -20,8 +21,9 @@ def login():
     '''
     :   authenticate user
     '''
-    creds = valid_credentials()
-    return authenticate_user(creds)
+    login_user()
+    # creds = valid_credentials()
+    # return authenticate_user(creds)
 
 
 @app.command()
