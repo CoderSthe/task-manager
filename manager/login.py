@@ -5,7 +5,7 @@ def login_user():
     password = input("Enter password: ")
 
     auth = password.encode()
-    auth_hash = hashlib.md5(auth).hexdigest()
+    auth_hash = hashlib.sha256(auth).hexdigest()
     with open("credentials.txt", "r") as f:
         stored_email, stored_password = f.read().split("\n")
     
