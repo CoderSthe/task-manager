@@ -13,6 +13,8 @@ def login_user():
         stored_password = stored_password.strip()
     
     if email == stored_email and auth_hash == stored_password:
+        with open('current_user.txt', 'w') as f:
+            f.write(email)
         print("Logged in successfully!")
     else:
         print("Login failed!\n")
